@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="img/favicon/favicon.png">
+  <title>spo.city - 실시간 스포츠중계 커뮤니티 스포시티</title>
+  <!-- CSS Files -->
+  <link href="css/test.css?v=1.0.0" rel="stylesheet" />
+  <!--font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <!--사이드바 스크립트-->
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script type="text/javascript">
+	/* 쿠키가 적용된 사이드바 */
+	jQuery(function(){
+		checkToggle();
+		});
+		function checkToggle(){
+			if(jQuery.cookie("isToggle") == "") {
+			$("#sidebar, #sideList, #sidebar-toggle").addClass("sideon");
+			} else {
+			$("#sidebar, #sideList, #sidebar-toggle").removeClass("sideon");
+			}
+		}
+		function toogleSide(){
+			jQuery.cookie('isToggle', 'no', { path : '/' });
+			this.checkToggle();
+		}
+		function toogleSideOn(){
+			jQuery.cookie('isToggle', '', { path : '/' });
+			this.checkToggle();
+		}
+  </script>
+</head>
+
+<body>
+	<div id="sidebar">
+		<div id="sideList">
+			<div class="listLeft">
+				<ul class="navbar__menu2">
+					<li><a href="#"><img src="img/logo.png"></a></li>
+				    <li><a href="#"><img src="img/navmenu/01.png"></a></li>
+					<li><a href="#"><img src="img/navmenu/02.png"></a></li>
+					<li><a href="#"><img src="img/navmenu/03.png"></a></li>
+					<li><a href="#"><img src="img/navmenu/04.png"></a></li>
+					<li><p style="font-size: 14px; color: #D1D1D1; text-align: left;">　스포츠</p></li>
+					<li><a href="#"><img src="img/navmenu/05.png"></a></li>
+					<li><a href="#"><img src="img/navmenu/06.png"></a></li>
+					<li><a href="#"><img src="img/navmenu/07.png"></a></li>
+					<li><a href="#"><img src="img/navmenu/08.png"></a></li>
+					<li><a href="#"><img src="img/navmenu/09.png"></a></li>
+				</ul>
+			</div>
+			<div class="listRight">
+				  <ul class="navbar__menu">
+					  <li><a href="#"><img src="img/logo2.png"></a></li>
+				    <li><a href="#"><img src="img/icon/sidenav01.png"></a></li>
+					<li><a href="#"><img src="img/icon/sidenav02.png"></a></li>
+					<li><a href="#"><img src="img/icon/sidenav03.png"></a></li>
+					<li><a href="#"><img src="img/icon/sidenav04.png"></a></li>
+					<li><a href="#"><img src="img/icon/sidenav05.png"></a></li>
+					<li><a href="#"><img src="img/icon/sidenav06.png"></a></li>
+					<li><a href="#"><img src="img/icon/sidenav07.png"></a></li>
+					<li><a href="#"><img src="img/icon/sidenav08.png"></a></li>
+					<li><a href="#"><img src="img/icon/sidenav09.png"></a></li>
+				  </ul>
+			</div>
+		</div>
+	</div>
+	<div id="sidebar-toggle">
+		<a class="sideOnImg" alt="open" onclick="toogleSideOn();"><img src="img/icon/toggleleft.png"></a>
+		<a class="sideOffImg" alt="close" onclick="toogleSide();"><img src="img/icon/toggleright.png"></a>
+	</div>
+	<div id="maincontainer">
+		<div id="topmenu"><ul>
+			<li id="topbtn1"></li>
+			<li id="topbtn2"></li>
+			<li id="topbtn3"></li>
+			<li id="topbtn4">로그인</li>
+			<li id="topbtn5">회원가입</li>
+		</ul></div>
+	</div>
+</body>
+</html>

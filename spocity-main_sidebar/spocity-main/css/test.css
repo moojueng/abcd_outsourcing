@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body {
+	background-color: #202221;
+	margin: 0;
+	color: #fff;
+}
+#sidebar, #sideList, #sidebar-toggle {
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition:all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+#sidebar {
+	-webkit-transform: translate3d(0px,0,0);
+	-moz-transform: translate3d(0px,0,0);
+	transform: translate3d(0px,0,0);
+	overflow:hidden;
+	position:fixed;
+	/* 우측 사이드바 설정 */
+	width:200px; height:100%;
+	left:0; top:0;
+	background:#161717;
+}
+#sidebar.sideon {
+	-webkit-transform:translate3d(-130px,0,0);
+	-moz-transform:translate3d(-130px,0,0);
+	transform:translate3d(-130px,0,0); 
+	overflow-y: hidden;
+	background:#161717; 
+}
+
+#sideList {
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	overflow:hidden;
+	width:240px;
+}
+#sideList.sideon {
+	-webkit-transform: translate3d(-55px,0,0);
+	-moz-transform: translate3d(-55px,0,0);
+	transform: translate3d(-55px,0,0);
+}
+
+#sideList .listLeft { float:left; height:auto; }
+#sideList .listRight { float:right; height:auto; }
+#sidebar-toggle .sideOnImg {
+	position:fixed; display:block;
+	left:160px; margin-top:40px;
+	width:34px; height:34px; line-height:34px;
+	border-radius:45px; background:#2c2d2d; color:#fff; text-align:center;
+}
+#sidebar-toggle .sideOffImg { display:none; }
+#sidebar-toggle.sideon .sideOffImg {
+	position:fixed; display:block;
+	left:54px; margin-top:40px;
+	width:34px; height:34px; line-height:34px;
+	border-radius:45px;	background:#2c2d2d; color:#fff; text-align:center; 
+}
+#sidebar-toggle.sideon .sideOnImg { display:none; }
+
+.navbar__menu {
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding-left: 0;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.navbar__menu li {
+  text-align: center;
+  vertical-align: top;
+  margin: 10px 5px 0px 30px;
+  padding-left: 5px;
+}
+
+.navbar__menu2 {
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding-left: 0;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.navbar__menu2 li {
+  text-align: center;
+  vertical-align: top;
+  margin: 10px 5px 0px 0px;
+  padding-left: 0px;
+}
+
+#maincontainer {
+	width: 100%; display: contents;
+	background-color: #202221;
+	position: static;
+	top: 0px; left: 240px;
+}
+
+#topmenu{
+	width: 100%; height: 57px;
+	background-color: #202221;
+}
+
+#topmenu ul{
+	list-style: none;
+	display: flex;
+	position: absolute;
+	top: 0px; right: 260px;
+}
+#topmenu li{
+	margin-left: 5px;
+}
+#topbtn1{
+	width:28px; height: 28px;
+	background-image: url("../img/icon/korea.png");
+}
+#topbtn2{
+	width:28px; height: 28px;
+	background-image: url("../img/icon/icon2.png");
+}
+#topbtn3{
+	width:28px; height: 28px;
+	background-image: url("../img/icon/icon3.png");
+}
+#topbtn4{
+	width:75px; height: 28px; line-height: 28px;
+	font-size: 14px;
+	border-radius:5px; background:#313231; color:#fff; text-align:center;
+}
+#topbtn5{
+	width:75px; height: 28px; line-height: 28px;
+	font-size: 14px;
+	border-radius:5px; background:#19793a; color:#fff; text-align:center;
+}
