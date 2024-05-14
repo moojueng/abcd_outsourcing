@@ -1,0 +1,25 @@
+로보플로
+vscode
+yolov8
+windows
+
+
+(딥러닝 외주)
+오늘 한거 화욜 14일에 교실청소 시키고 깃허브 유투브에 정리할것
+- yolov8 코랩에서 작업
+- 데이터셋 로보플로에서 작업
+- 운영체제 윈도우
+
+1. 로보플로
+2. 코랩 훈련
+3. 아나콘다
+- 가상환경 생성
+conda create -n test1 python=3.8
+- 가상환경 진입
+conda activate test1
+- 미리 만들어놓은 good 폴더에 best.pt파일 다운받아 놓은거
+  yolov8로 실행
+- yolo predict model=best.pt source=0 show=True
+* 실행이 안된다면
+- pip install ultralytics 설치
+- pip install yolo 설치
